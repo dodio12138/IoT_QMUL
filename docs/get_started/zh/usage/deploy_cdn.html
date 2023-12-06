@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"  class=" language_zh ">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="teedoc, 部署, CDN">
+    
+    
+    <meta name="description" content="teedoc 生成的网站部署到 CDN">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": []}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+        
+        <meta name="html-generator" content="teedoc-plugin-jupyter-notebook-parser">
+        
+        <meta name="blog-generator" content="teedoc-plugin-blog">
+        
+        <script src="/IoT_QMUL/docs/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/IoT_QMUL/docs/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/IoT_QMUL/docs/static/css/prism.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/IoT_QMUL/docs/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/IoT_QMUL/docs/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/IoT_QMUL/docs/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/IoT_QMUL/docs/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/IoT_QMUL/docs/static/css/search/style.css" type="text/css"/>
+        
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?90c693aa2475224142e727c14a50bb49";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+        
+        <link rel="stylesheet" href="/IoT_QMUL/docs/static/js/add_hint/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/IoT_QMUL/docs/static/css/custom.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/IoT_QMUL/docs/static/js/thumbs_up/style.css" type="text/css"/>
+        
+    
+    
+    <title>部署 teedoc 生成的网站到 CDN - teedoc</title>
+    
+    <script type="text/javascript">js_vars = {"teedoc-plugin-ad-hint": {"type": "hint", "label": "!!!", "content": "<a href=\"https://github.com/sipeed/Maix-Speech\">Maix-Speech</a> 语音识别库 现在可以获取到啦！欢迎使用并 star", "show_times": 2, "show_after_s": 432000, "date": null, "color": "#a0421d", "link_color": "#e53935", "link_bg_color": "#e6ae5c", "bg_color": "#ffcf89", "color_hover": "white", "bg_color_hover": "#f57c00", "close_color": "#eab971"}, "teedoc-plugin-thumbs-up": {"label_up": "有帮助", "label_down": "没帮助", "icon": "/static/images/thumbs_up/up.svg", "icon_clicked": "/static/images/thumbs_up/upped.svg", "url": "http://192.168.0.50:5000", "show_up_count": true, "show_down_count": false, "msg_already_voted": "You have already voted", "msg_thanks": "Thanks for your vote", "msg_down_prompt": "Thanks to tell us where we can improve?(At least 10 characters)", "msg_down_prompt_error": "Message should be at least 10 characters and less than 256 characters", "msg_error": "Request server failed!"}}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/IoT_QMUL/docs/">
+                
+                    <img class="site_logo" src="/IoT_QMUL/docs/static/image/logo.png" alt="teedoc logo">
+                
+                
+                    <h2>teedoc</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class=""><a  href="/IoT_QMUL/docs/">首页</a></li>
+<li class="sub_items active_parent"><a href="/IoT_QMUL/docs/get_started/zh/">安装使用</a><ul><li class=""><a  href="/IoT_QMUL/docs/more/">更多</a></li>
+<li class=""><a  href="/IoT_QMUL/docs/more/en/">更多英文</a></li>
+<li class="active"><a  href="/IoT_QMUL/docs/get_started/zh/">使用</a></li>
+<li class=""><a  href="/IoT_QMUL/docs/develop/zh/">开发</a></li>
+</ul>
+</li>
+<li class=""><a  href="/IoT_QMUL/docs/develop/zh/">开发</a></li>
+<li class="sub_items active_parent"><a href="/IoT_QMUL/docs/blog/">列表展示</a><ul><li class="active"><a  href="/IoT_QMUL/docs/get_started/zh/">使用</a></li>
+<li class=""><a  href="/IoT_QMUL/docs/develop/zh/">开发</a></li>
+</ul>
+</li>
+<li class=""><a  href="/IoT_QMUL/docs/blog/">博客</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a target="_blank" href="https://github.com/neutree/teedoc">github</a></li>
+<li class="sub_items "><a  >Language: 中文 简体</a><ul><li class=""><a  href="/IoT_QMUL/docs/get_started/en/usage/deploy_cdn.html">English</a></li>
+<li class="active"><a  href="/IoT_QMUL/docs/get_started/zh/usage/deploy_cdn.html">中文 简体</a></li>
+</ul></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">搜索啊哈哈</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">Keywords separated by space</span>
+                                <span id="search_loading_hint">Loading, wait please ...</span>
+                                <span id="search_download_err_hint">Download error, please check network and refresh again</span>
+                                <span id="search_other_docs_result_hint">Result from other docs</span>
+                                <span id="search_curr_doc_result_hint">Result from current doc</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active no_link sidebar_category"><span class="label">简介</span></li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/index.html"><span class="label">teedoc 简介</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/install/index.html"><span class="label">安装 teedoc</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/usage/start.html"><span class="label">开始写文档</span><span class=""></span></a></li>
+<li class="not_active no_link sidebar_category"><span class="label">自定义</span></li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/plugins/index.html"><span class="label">插件</span><span class="sub_indicator"></span></a><ul class="show">
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/plugins/themes.html"><span class="label">主题插件</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/plugins/others.html"><span class="label">其它插件</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active  with_link"><a href="/IoT_QMUL/docs/get_started/zh/plugins/themes.html#123" ><span class="label">插件</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active  with_link"><a href="/IoT_QMUL/docs/get_started/zh/plugins/themes.html#<code>teedoc-plugin-theme-default</code>%3A-默认主题插件" ><span class="label">主题插件</span><span class=""></span></a></li>
+<li class="not_active  with_link"><a href="/IoT_QMUL/docs/get_started/zh/plugins/themes.html#534543" ><span class="label">其它插件</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/syntax/syntax_markdown.html"><span class="label">markdown 语法</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/syntax/html.html"><span class="label">HTML 语法</span><span class=""></span></a></li>
+<li class="not_active  with_link"><a href="/IoT_QMUL/docs/get_started/zh/syntax/syntax_markdown.html#列表" ><span class="label">Markdown 文件头</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/syntax/syntax_notebook.html"><span class="label">jupyter notebook 语法</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/syntax/maixpy3-example.html"><span class="label">jupyter notebook 语法测试2</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/syntax/syntax_notebook.html"><span class="label">jupyter notebook 语法</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/syntax/syntax_notebook.html"><span class="label">jupyter notebook 语法</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/syntax/syntax_notebook.html"><span class="label">jupyter notebook 语法</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/syntax/syntax_notebook.html"><span class="label">jupyter notebook 语法</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/syntax/syntax_notebook.html"><span class="label">jupyter notebook 语法</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/syntax/syntax_notebook.html"><span class="label">jupyter notebook 语法</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/syntax/syntax_notebook.html"><span class="label">jupyter notebook 语法</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/syntax/syntax_notebook.html"><span class="label">jupyter notebook 语法</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/syntax/syntax_notebook.html"><span class="label">jupyter notebook 语法</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/syntax/syntax_notebook.html"><span class="label">jupyter notebook 语法</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/syntax/syntax_notebook.html"><span class="label">jupyter notebook 语法</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/syntax/syntax_notebook.html"><span class="label">jupyter notebook 语法</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/syntax/syntax_notebook.html"><span class="label">jupyter notebook 语法</span><span class=""></span></a></li>
+<li class="active_parent with_link"><a href="/IoT_QMUL/docs/get_started/zh/usage/deploy.html"><span class="label">部署</span><span class="sub_indicator"></span></a><ul class="show">
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/usage/deploy_github_pages.html"><span class="label">部署到 github</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/usage/deploy_nginx.html"><span class="label">使用 nginx 部署到服务器</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/IoT_QMUL/docs/get_started/zh/usage/deploy_cdn.html"><span class="label">使用 CDN 加速网站</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/usage/sites.html"><span class="label">使用了 teedoc 的网站</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/syntax/syntax_markdown.html"><span class="label">testtest</span><span class=""></span></a></li>
+<li class="not_active no_link sidebar_category"><span class="label">更多样例</span></li>
+<li class="not_active no_link"><a><span class="label">更多样例</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active no_link"><a><span class="label">二级子目录样例</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active no_link"><a><span class="label">三级子目录样例</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/more/example_docs/doc1.html"><span class="label">文章1</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/zh/more/example_docs/doc2.html"><span class="label">文章2</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active ext_link with_link"><a href="https://github.com/teedoc/teedoc" target="_blank"><span class="label">这是一个链接</span><span class="ext_link_icon"></span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>部署 teedoc 生成的网站到 CDN</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                            <div id="source_link">
+                                <a href="https://github.com/teedoc/teedoc.github.io/blob/main/docs/get_started/zh/usage/deploy_cdn.md" target="_blank">
+                                    编辑页面
+                                </a>
+                            </div>
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <p>为了让各个地方的用户访问站点更加快速，可以使用 CDN 加速，<br />
+原理简单介绍就是先把网站放在一个源服务器上， 然后将这个资源同步到全国甚至全世界各地的节点上，<br />
+浏览器想要通过域名访问网站，这个域名指向的服务器只做一件事情，就是解析浏览器的地点，然后返回给给浏览器离浏览器最近的节点 IP 地址，然后浏览器直接访问最近的节点，从而实现了加速</p>
+<p>先找一个 <code>CDN</code> 提供商，比如 阿里云 腾讯云 七牛云 都可以</p>
+<p>然后步骤如下：</p>
+<h2 id="%E6%96%B9%E6%B3%95%E4%B8%80">方法一</h2>
+<p>直接使用这些提供商的空间， 一般都有免费额度，直接上传这个网站到服务商的空间里面，服务商会分配一个临时域名，启用 <code>CDN</code> 就可以直接访问了，很简单。</p>
+<p>但是缺点就是每次更新都要重新上传，不好弄，用方法二可以简单解决</p>
+<h2 id="%E6%96%B9%E6%B3%95%E4%BA%8C">方法二</h2>
+<p>自己创建源服务器，源服务器更新后，服务商自动同步更新到各个节点</p>
+<h3 id="%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88%E6%BA%90%E7%BD%91%E7%AB%99%EF%BC%89">创建一个源服务器（源网站）</h3>
+<p>按照前面的方法建立一个网站 ，得到<code>域名A</code>， 比如<code>teedoc.github.io</code></p>
+<h3 id="%E4%B8%BA%E7%BD%91%E7%AB%99%E6%B7%BB%E5%8A%A0-CDN-%E5%8A%A0%E9%80%9F">为网站添加 CDN 加速</h3>
+<p>如果是中国国内的服务商，需要先有一个备案的<code>域名B</code></p>
+<p>，然后注册登录，添加一个 <code>CDN</code>服务， 设置回源站点为前面建立的网站<code>域名A</code>即可</p>
+<p>然后访问<code>域名B</code>，服务商会自动从<code>域名A</code>出拉取网页同步到全国或者全球的各个节点，然后用户访问<code>域名B</code>就会重定向到离用户最近的节点的<code>IP</code>，以保证最快的浏览速度</p>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/IoT_QMUL/docs/get_started/zh/usage/deploy_nginx.html">
+                            <span class="icon"></span>
+                            <span class="label">使用 nginx 部署到服务器</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/IoT_QMUL/docs/get_started/zh/usage/sites.html">
+                            <span class="label">使用了 teedoc 的网站</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a>链接</a><ul><li><a target="_blank" href="https://github.com/neutree/teedoc">使用 teedoc 构建</a></li>
+<li><a target="_blank" href="https://neucrack.com">Copyright © 2021 Neucrack</a></li>
+</ul>
+</li>
+<li><a>源码</a><ul><li><a target="_blank" href="https://github.com/neutree/teedoc">github</a></li>
+<li><a target="_blank" href="https://github.com/teedoc/teedoc.github.io">本网站源文件</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://beian.miit.gov.cn">*ICP备********号-1</a></li>
+<li><a target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index">*公网安备**************号</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/IoT_QMUL/docs/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/IoT_QMUL/docs/static/js/plugin_blog/main.js"></script>
+    
+        <script src="/IoT_QMUL/docs/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/IoT_QMUL/docs/static/js/theme_default/main.js"></script>
+    
+        <script src="/IoT_QMUL/docs/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/IoT_QMUL/docs/static/js/prism.js"></script>
+    
+        <script src="/IoT_QMUL/docs/static/js/search/search_main.js"></script>
+    
+        <script src="/IoT_QMUL/docs/static/js/add_hint/main.js"></script>
+    
+        <script src="/IoT_QMUL/docs/static/js/custom.js"></script>
+    
+        <script src="/IoT_QMUL/docs/static/js/thumbs_up/main.js"></script>
+    
+</body>
+
+</html>
