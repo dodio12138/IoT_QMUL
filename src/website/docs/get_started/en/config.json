@@ -4,7 +4,7 @@
     "locale": "en",
     "class": "language_en",
     "navbar": {
-        "title": "teedoc",
+        "title": "GPS Recording",
         "logo": {
             "alt": "teedoc logo",
             "src": "/static/image/logo.png"
