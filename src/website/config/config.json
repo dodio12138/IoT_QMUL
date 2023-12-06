@@ -9,7 +9,7 @@
         "home_url": "/",
         "items": [
             {
-                "url": "/Introduction/",
+                "url": "/introduction/",
                 "label": "Docs",
                 "position": "left"
             }
