@@ -55,7 +55,7 @@ p {
     line-height: 2em;
 }
 blockquote {
-    border-left: 4px solid #4caf7d;
+    border-left: 4px solid #5c9abc;
     margin: 0 0 1em 2px;
     padding: 1px;
     padding-left: 1em;
@@ -91,8 +91,8 @@ sup a {
     font-size: 1.1em;
     background-color: #f1f1f1;
     padding: 4px;
-    border-left: 1px solid #4caf7d;
-    border-right: 1px solid #4caf7d;
+    border-left: 1px solid #5c9abc;
+    border-right: 1px solid #5c9abc;
 }
 dl > dt {
     font-weight: bold;
@@ -118,8 +118,8 @@ th {
     font-weight: 700;
     color: white;
     filter: brightness(110%);
-    border: 2px solid #4caf7d;
-    background-color: #4caf7d;
+    border: 2px solid #5c9abc;
+    background-color: #5c9abc;
 }
 td {
     background-color: #fbfbfb;
@@ -132,7 +132,7 @@ code {
     font-family: Menlo, Consolas, "DejaVu Sans Mono", Bitstream Vera Sans Mono, Courier New, monospace, Monaco, 'Andale Mono', 'Ubuntu Mono', "Microsoft YaHei";
     font-size: 85%;
     padding: 0.2em 0.4em;
-    color: #4caf7d;
+    color: #5c9abc;
 }
 pre[class*="language-"].line-numbers > code {
     background: none;
@@ -147,7 +147,7 @@ pre[class*="language-"].line-numbers > code {
     padding: 1em;
     cursor: pointer;
     transition: 0.2s;
-    background: #4caf7d;
+    background: #5c9abc;
 }
 .btn:hover,
 #page_content .btn:hover,
@@ -213,7 +213,7 @@ pre[class*="language-"].line-numbers > code {
     word-break: keep-all;
 }
 #navbar h2 {
-    color: #4caf7d;
+    color: #5c9abc;
 }
 #navbar a{
     margin: 5px;
@@ -362,7 +362,7 @@ pre[class*="language-"].line-numbers > code {
 #sidebar .active > a, #navbar .active > a, #navbar .active_parent > a{
     background-color: #f1f1f1;
     border-radius: 5px;
-    color: #4caf7d;
+    color: #5c9abc;
     transition: 0.4s;
 }
 #navbar .sub_items .active > a {
@@ -390,7 +390,7 @@ pre[class*="language-"].line-numbers > code {
 }
 #sidebar .sub_indicator {
     transition: transform 0.4s linear;
-    background: url("/IoT_QMUL/docs/static/image/theme_default/indicator.svg");
+    background: url("/static/image/theme_default/indicator.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -436,7 +436,7 @@ pre[class*="language-"].line-numbers > code {
     transition: 0.4s;
     visibility: hidden;
     opacity: 0;
-    background: #4caf7d;
+    background: #5c9abc;
 }
 #sidebar li > a:hover+.tip, #sidebar .tip:hover {
     visibility: visible;
@@ -454,7 +454,7 @@ pre[class*="language-"].line-numbers > code {
     padding: 0.2em;
     margin: 0.4em;
     filter: brightness(120%);
-    border: 1px solid #4caf7d;
+    border: 1px solid #5c9abc;
 }
 #blog_list > ul {
     padding-left: 0;
@@ -468,7 +468,7 @@ pre[class*="language-"].line-numbers > code {
 }
 #blog_list > ul > li a, #blog_list > ul > li a:visited {
     padding: 0;
-    color: #4caf7d;
+    color: #5c9abc;
 }
 html[lang^=zh] #article_content #blog_list h2:before {
     content: "";
@@ -493,7 +493,7 @@ html[lang^=zh] #article_content #blog_list h2:before {
     width: 2%;
 }
 #menu {
-    background: url("/IoT_QMUL/docs/static/image/theme_default/menu.svg");
+    background: url("/static/image/theme_default/menu.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -687,7 +687,7 @@ html[lang^=zh].heading_no_counter #article_content h4:before {
     border-radius: 5px;
     color: #ffffffcc;
     font-size: 0.9em;
-    background-color: #4caf7d;
+    background-color: #5c9abc;
 }
 #article_info {
     display: flex;
@@ -709,11 +709,11 @@ html[lang^=zh].heading_no_counter #article_content h4:before {
     cursor: pointer;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url("/IoT_QMUL/docs/static/image/theme_default/print.svg");
+    background-image: url("/static/image/theme_default/print.svg");
 }
 #article_info>div>span {
     padding: 0.2em;
-    color: #4caf7d;
+    color: #5c9abc;
 }
 #source_link {
     display: flex;
@@ -746,7 +746,7 @@ div.code-toolbar > .toolbar a:hover, div.code-toolbar > .toolbar a:focus, div.co
 /* #to_top_wrapper {
 } */
 #to_top {
-    background: url("/IoT_QMUL/docs/static/image/theme_default/to-top.svg");
+    background: url("/static/image/theme_default/to-top.svg");
     background-size: 2em;
     background-repeat: no-repeat;
     background-position: center;
@@ -806,7 +806,7 @@ div.code-toolbar > .toolbar a:hover, div.code-toolbar > .toolbar a:focus, div.co
 }
 #previous_next #previous a > .icon{
     transition: transform 0.4s linear;
-    background: url("/IoT_QMUL/docs/static/image/theme_default/to-top.svg");
+    background: url("/static/image/theme_default/to-top.svg");
     background-size: 2em;
     background-repeat: no-repeat;
     background-position: center;
@@ -829,7 +829,7 @@ div.code-toolbar > .toolbar a:hover, div.code-toolbar > .toolbar a:focus, div.co
 }
 #previous_next #next a > .icon{
     transition: transform 0.4s linear;
-    background: url("/IoT_QMUL/docs/static/image/theme_default/to-top.svg");
+    background: url("/static/image/theme_default/to-top.svg");
     background-size: 2em;
     background-repeat: no-repeat;
     background-position: center;
@@ -975,7 +975,7 @@ a.toc-link {
 }
 
 .is-active-link::before {
-	border-left: 2px solid #4caf7d;
+	border-left: 2px solid #5c9abc;
 }
 
 /* class template */
@@ -1065,8 +1065,8 @@ a.toc-link {
 }
 .tabset-tab-active {
     background-color: #0000000d;
-    border-bottom: 0.2em solid #4caf7d;
-    color: #4caf7d;
+    border-bottom: 0.2em solid #5c9abc;
+    color: #5c9abc;
 }
 .tabset-text-container {
     padding: 1em;
@@ -1102,7 +1102,7 @@ details > summary {
 }
 details > summary:before {
     display:inline-block;
-    content: url("/IoT_QMUL/docs/static/image/theme_default/array.svg");
+    content: url("/static/image/theme_default/array.svg");
     transform:rotate(90deg);
     transition: 0.4s;
     left: 0.5em;
@@ -1156,7 +1156,7 @@ details > .details-content, details > div {
         padding-left: 0;
     }
     #navbar_menu_btn {
-        background: url("/IoT_QMUL/docs/static/image/theme_default/menu.svg");
+        background: url("/static/image/theme_default/menu.svg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -1213,7 +1213,7 @@ details > .details-content, details > div {
         top: 1em;
     }
     #menu.close {
-        background: url("/IoT_QMUL/docs/static/image/theme_default/back.svg");
+        background: url("/static/image/theme_default/back.svg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -1271,7 +1271,7 @@ details > .details-content, details > div {
         z-index: 97;
     }
     #toc_btn {
-        background: url("/IoT_QMUL/docs/static/image/theme_default/anchor.svg");
+        background: url("/static/image/theme_default/anchor.svg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -1293,7 +1293,7 @@ details > .details-content, details > div {
     cursor: pointer;
 }
 #navbar .light, #navbar .dark:hover {
-    background: url("/IoT_QMUL/docs/static/image/theme_default/light_mode.svg");
+    background: url("/static/image/theme_default/light_mode.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -1301,7 +1301,7 @@ details > .details-content, details > div {
     min-width: 1rem;
 }
 #navbar .dark, #navbar .light:hover {
-    background: url("/IoT_QMUL/docs/static/image/theme_default/dark_mode.svg");
+    background: url("/static/image/theme_default/dark_mode.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

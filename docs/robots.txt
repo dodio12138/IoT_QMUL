@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://dodio12138.github.io/sitemap.xml
+Sitemap: https://teedoc.github.io/sitemap.xml

@@ -1,5 +1,27 @@
 {
-    "import": "config",
-    "class": "md_page",
-    "name": "Pages"
+    "import": "config_zh",
+    "name": "中文页面",
+    "class": "md_page language_zh",
+    "navbar": {
+        "title": "teedoc123",
+        "items": [
+            {
+                "id": "language",
+                "label": "Language: ",
+                "position": "right",
+                "items": [
+                    {
+                        "id": "zh",
+                        "url": "/",
+                        "label": "中文"
+                    },
+                    {
+                        "id": "en",
+                        "url": "/en",
+                        "label": "English"
+                    }
+                ]
+            }
+        ]
+    }
 }

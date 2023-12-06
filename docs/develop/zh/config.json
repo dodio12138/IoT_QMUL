@@ -1,0 +1,13 @@
+{
+    "import": "config_zh",
+    "navbar": {
+        "items": [
+            {
+                "id": "language",
+                "label": "Language: ",
+                "position": "right",
+                "type": "language"
+            }
+        ]
+    }
+}
