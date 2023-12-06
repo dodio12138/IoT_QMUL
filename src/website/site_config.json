@@ -1,7 +1,7 @@
 {
     "site_name": "GPS Recording",
     "site_slogon": "Record your life",
-    "site_root_url": "IoT_QMUL/docs/",
+    "site_root_url": "/",
     "site_domain": "dodio.github.io",
     "site_protocol": "https",
     "config_template_dir": "config",
