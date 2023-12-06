@@ -3,3 +3,5 @@ items:
     file: README.md
 -   label: Objective
     file: objective/objective.md
+-   label: Use Cases
+    file: use cases/use_cases.md
