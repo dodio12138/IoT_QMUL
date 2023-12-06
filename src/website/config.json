@@ -1,0 +1,40 @@
+{
+    "locale": "en",
+    "navbar": {
+        "title": "GPS Recording",
+        "logo": {
+            "alt": "teedoc logo",
+            "src": "/static/image/logo.png"
+        },
+        "home_url": "/",
+        "items": [
+            {
+                "url": "/get_started/en/",
+                "label": "Doc",
+                "position": "left",
+                "type": "list"
+            }
+        ]
+    },
+    "footer":{
+        "top":[
+            {
+                "label": "",
+                "items": [
+                    {
+                        "label": "",
+                        "url": "#",
+                        "target": "_blank"
+                    }
+                ]
+            }
+        ],
+        "bottom": [
+            {
+                "label": "Written by wenhao zhang",
+                "url": "https://github.com/dodio12138",
+                "target": "_blank"
+            }
+        ]
+    }
+}

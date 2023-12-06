@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://dodio12138.github.io/sitemap.xml
