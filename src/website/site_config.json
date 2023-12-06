@@ -1,5 +1,5 @@
 {
-    "site_name": "mysite",
+    "site_name": "GPS Recording",
     "site_slogon": "",
     "site_root_url": "/IoT_QMUL/docs/",
     "site_domain": "dodio12138.github.io",
@@ -7,9 +7,9 @@
     "config_template_dir": "config",
     "route": {
         "docs": {
-            "/Introduction/": "docs/Introduction",
-            "/Objectives/": "docs/Objectives",
-            "/Use_Cases/": "docs/Use Cases"
+            "/introduction/": "docs/Introduction",
+            "/objectives/": "docs/Objectives",
+            "/use_Cases/": "docs/Use Cases"
         },
         "pages": {
             "/": "pages/index"
