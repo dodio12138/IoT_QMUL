@@ -9,13 +9,6 @@
             "alt": "teedoc logo",
             "src": "/static/image/logo.png"
         },
-        "home_url": "/en/",
-        "items": [
-            {
-                "url": "/get_started/en/",
-                "label": "Install",
-                "position": "left"
-            }
-        ]
+        "home_url": "/en/"
     }
 }
