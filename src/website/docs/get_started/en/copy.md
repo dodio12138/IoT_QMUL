@@ -2,10 +2,6 @@
 title: Introduction
 ---
 
-Who doesn't want to know what places they've been to in the past? As a record of their travels or bits of their life. Too many details of travelling are easily forgotten, so this project is designed to record people's life track data by designing a piece of what I call `Footprint Card`, and subsequently visualize the track through a webpage, hoping to recall some forgotten travel memories. This coursework approaches this problem using Soft Systems Methodology (SSM).
-
-
-
 Official website: [teedoc.neucrack.com](https://teedoc.neucrack.com/) or [teedoc.github.io](https://teedoc.github.io/)
 Source file of this document: [github.com/teedoc/teedoc.github.io](https://github.com/teedoc/teedoc.github.io)
 Source code: [https://github.com/teedoc/teedoc](https://github.com/teedoc/teedoc) Welcome star
@@ -45,3 +41,33 @@ If you encounter problems during use, you can find similar problems in [here](ht
 - [x] Blog support
 - [x] Switch from gitbook is easy, just config `route` and convert `SUMMARY.md` by `summary2yaml` command
 - [x] Comments(Plugins), e.g. `gitalk`
+
+
+## Demo
+
+[This website](https://teedoc.github.io/) is generated using `teedoc`, what you see now is what the generated website looks like.
+
+In addition, there are other websites that use `teedoc`, please see [here](./usage/sites.md) for details
+
+
+## Similar tools
+
+In fact, there are many tools of this type, but each one is slightly different. Just choose one according to your needs.
+
+If you have choice difficulties, you are recommended to use teedoc if you meet some of the following conditions:
+* Use `Jupyter notebook` to write documents or code? Decisively choose teedoc
+* Does the function meet your needs?
+* Does the interface meet your aesthetics (you can customize css, or change the theme plug-in)
+* Familiar with Python? Plug-ins and functions can be customized at any time
+
+Other similar tools:
+* docusaurus: The UI layout of teedoc is almost similar to it, but it uses vue to write, teedoc is native js, if you use vue, you can consider this
+* gitbook: a tool that used to be very useful, but it is no longer maintained by the government, and it is turned to commercial. It is not recommended to use it
+* docsify: Only one page is needed. Markdown is rendered in the browser instead of pre-rendered into HTML. The advantage is that it is lightweight, but SEO is not friendly. You can use its SSR function, written in nodejs
+* readthedocs: A tool used by many open source projects. Like gitbook, it also has a website service. You can start writing documents after registering and logging in, or you can download the software to generate the website yourself, which is friendly to the RST format.
+
+
+## Some usage suggestions
+
+* Add `Generate with teedoc` in footer to help more people discover teedoc and promote the growth of the project
+* Use the template project to start a new document project, you can run it first, and then modify it according to your own needs, so that you can get started faster

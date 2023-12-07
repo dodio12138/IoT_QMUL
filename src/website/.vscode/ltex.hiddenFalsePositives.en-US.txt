@@ -1,0 +1,1 @@
+{"rule":"ENGLISH_WORD_REPEAT_RULE","sentence":"^\\QImportant processes\nRecord GPS information for a long period of time\nTransmission of information via Bluetooth communication\nVisualization of user data\nData storage\\E$"}
