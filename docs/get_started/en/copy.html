@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en"  class=" language_en  md_page ">
+<html lang="en"  class=" language_en ">
 
 
 <head>
@@ -44,10 +44,10 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
         
     
     
-    <title>no translation - Footprint Card</title>
+    <title>Introduction - Footprint Card</title>
     
     <script type="text/javascript">js_vars = {}</script>
-    <script type="text/javascript">metadata = {"tags": [], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": "", "class": "md_page"}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
 </head>
 
 
@@ -113,7 +113,7 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
                     <div id="article_head">
                         <div id="article_title">
                             
-                            <h1>no translation</h1>
+                            <h1>Introduction</h1>
                             
                         </div>
                         <div id="article_tags">
@@ -142,33 +142,67 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
                     </div>
                     <div id="article_content">
                         
-                            <div id="visit_from"></div>
-<div id="no_translate_hint">This page not translated yet</div>
-<div>
-    <span id="visit_hint">Please visit</span>
-    <a id="translate_src"></a>
-</div>
-<div>
-    <script>
-        function getQueryVariable(variable)
-        {
-            var query = window.location.search.substring(1);
-            var vars = query.split("&");
-            for (var i=0;i<vars.length;i++) {
-                    var pair = vars[i].split("=");
-                    if(pair[0] == variable){return pair[1];}
-            }
-            return(false);
-        }
-        var ref = getQueryVariable("ref");
-        var from = getQueryVariable("from");
-        var link = document.getElementById("translate_src");
-        var fromDis = document.getElementById("visit_from");
-        link.href = ref;
-        link.text = ref;
-        fromDis.innerHTML = from;
-    </script>
-</div>
+                            <p>Official website: <a href="https://teedoc.neucrack.com/"  target="_blank">teedoc.neucrack.com</a> or <a href="https://teedoc.github.io/"  target="_blank">teedoc.github.io</a><br />
+Source file of this document: <a href="https://github.com/teedoc/teedoc.github.io"  target="_blank">github.com/teedoc/teedoc.github.io</a><br />
+Source code: <a href="https://github.com/teedoc/teedoc"  target="_blank">https://github.com/teedoc/teedoc</a> Welcome star</p>
+<p>Convert documents in <code>Markdown</code> or <code>Jupyter Notebook</code> format into <code>HTML</code> static web pages</p>
+<p><code>teedoc</code> can be used in the following scenarios:</p>
+<ul>
+<li>Build a document website, and it’s best to support multiple documents and custom pages</li>
+<li>Build a <code>WiKi</code> website</li>
+<li>Build a personal or corporate knowledge base</li>
+<li>Build a personal or corporate website</li>
+<li>Blog</li>
+</ul>
+<p>If you encounter problems during use, you can find similar problems in <a href="https://github.com/teedoc/teedoc/issues"  target="_blank">here</a> (you need to register and log in to github) to find similar issues, or create an issue</p>
+<h2 id="Features">Features</h2>
+<ul>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Simple to use, cross-platform, only dependent on <code>Python3</code></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>No database required, all static pages of the website</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>The deployment is simple, the generated website is a fully static page, which can be directly copied to the server or uploaded to a third party organization for deployment</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Easy to write, using Markdown syntax</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Jupyter notebook support</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>HTML support, you can directly use HTML to write pages, with great freedom</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Multi-document support</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Plug-in support</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Multi-theme support (implemented by plug-in)</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Control the style accurate to the page through css (implemented by customizing the id and class of each page)</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Multi-level directory support(infinite levels)</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Multi-language support (manual translation) (Internationalization/i18n)</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled/>Multilingual support (automatic translation)</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Multi-version support (implementation method is the same as multi-language)</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Search support</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>SEO friendly</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Real-time preview of changes</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Multi-threaded construction, faster construction speed</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Blog support</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Switch from gitbook is easy, just config <code>route</code> and convert <code>SUMMARY.md</code> by <code>summary2yaml</code> command</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Comments(Plugins), e.g. <code>gitalk</code></li>
+</ul>
+<h2 id="Demo">Demo</h2>
+<p><a href="https://teedoc.github.io/"  target="_blank">This website</a> is generated using <code>teedoc</code>, what you see now is what the generated website looks like.</p>
+<p>In addition, there are other websites that use <code>teedoc</code>, please see <a href="./usage/sites.html"  >here</a> for details</p>
+<h2 id="Similar-tools">Similar tools</h2>
+<p>In fact, there are many tools of this type, but each one is slightly different. Just choose one according to your needs.</p>
+<p>If you have choice difficulties, you are recommended to use teedoc if you meet some of the following conditions:</p>
+<ul>
+<li>Use <code>Jupyter notebook</code> to write documents or code? Decisively choose teedoc</li>
+<li>Does the function meet your needs?</li>
+<li>Does the interface meet your aesthetics (you can customize css, or change the theme plug-in)</li>
+<li>Familiar with Python? Plug-ins and functions can be customized at any time</li>
+</ul>
+<p>Other similar tools:</p>
+<ul>
+<li>docusaurus: The UI layout of teedoc is almost similar to it, but it uses vue to write, teedoc is native js, if you use vue, you can consider this</li>
+<li>gitbook: a tool that used to be very useful, but it is no longer maintained by the government, and it is turned to commercial. It is not recommended to use it</li>
+<li>docsify: Only one page is needed. Markdown is rendered in the browser instead of pre-rendered into HTML. The advantage is that it is lightweight, but SEO is not friendly. You can use its SSR function, written in nodejs</li>
+<li>readthedocs: A tool used by many open source projects. Like gitbook, it also has a website service. You can start writing documents after registering and logging in, or you can download the software to generate the website yourself, which is friendly to the RST format.</li>
+</ul>
+<h2 id="Some-usage-suggestions">Some usage suggestions</h2>
+<ul>
+<li>Add <code>Generate with teedoc</code> in footer to help more people discover teedoc and promote the growth of the project</li>
+<li>Use the template project to start a new document project, you can run it first, and then modify it according to your own needs, so that you can get started faster</li>
+</ul>
 
                         
                     </div>
