@@ -97,7 +97,7 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
                 </div>
                 <ul class="show">
 <li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/en/index.html"><span class="label">Introduction</span><span class=""></span></a></li>
-<li class="active with_link"><a href="/IoT_QMUL/docs/get_started/en/objective/objective.html"><span class="label">Objective</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/IoT_QMUL/docs/get_started/en/problem_statement/problem_statement.html"><span class="label">Problem Statement</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/en/use cases/use_cases.html"><span class="label">Use Cases</span><span class=""></span></a></li>
 </ul>
 
@@ -142,35 +142,42 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
                     </div>
                     <div id="article_content">
                         
-                            <h2 id="SSM1%3A-Problem-definition">SSM1: Problem definition</h2>
+                            <h3 id="SSM1%3A-Problem-definition">SSM1: Problem definition</h3>
 <blockquote>
-<p><em>The smart device needs to record the user's location coordinates at a high frequency and save them locally (or back them up every few days), and connect by Bluetooth on a mobile phone for data transfer to visualize the footprint of a web page in a browser.</em></p>
+<p>The smart device needs to record the user's location coordinates at a high frequency and save them locally (or back them up every few days), and connect by Bluetooth on a mobile phone for data transfer to visualize the footprint of a web page in a browser.</p>
 </blockquote>
-<h4 id="1.-Main-people-involved%3A">1. Main people involved:</h4>
+<h4 id="Main-people-involved%3A">Main people involved:</h4>
 <p>People who love to record or travel.</p>
-<h4 id="2.-Challenges">2. Challenges</h4>
+<h4 id="Challenges">Challenges</h4>
 <ul>
 <li>Efficient device for continuous recording of location information: apps for mobile phones take up a lot of power and memory while requiring apps to be on all the time, but apps are accidentally or automatically cleaned in the background.</li>
 <li>Secure storage and recall of data: the company or server side of the mobile app has a large amount of data about the user. Potential security.</li>
 </ul>
-<h4 id="3.-System-boundaries">3. System boundaries</h4>
+<h4 id="System-boundaries">System boundaries</h4>
 <ul>
 <li>Users' activity space.</li>
 <li>The device calls the sensor every 5 seconds.</li>
 </ul>
-<h4 id="4.-Important-processes">4. Important processes</h4>
+<h4 id="Important-processes">Important processes</h4>
 <ul>
 <li>Record GPS information for a long period of time.</li>
 <li>Transmission of information via Bluetooth communication.</li>
 <li>Visualization of user's data.</li>
 <li>Data storage.</li>
 </ul>
-<h4 id="5.-Technology-can-help-overcome-the-problem">5. Technology can help overcome the problem</h4>
+<h4 id="Technology-can-help-overcome-the-problem">Technology can help overcome the problem</h4>
 <ul>
 <li>Use Network Attached Storage (NAS) or some other decentralized server such as the <a href="https://solidproject.org/about"  target="_blank">Solid</a> project for data storage.</li>
 <li>Some series of <a href="https://www.espressif.com/en/products/socs/esp32-c3"  target="_blank">ESP</a> with low power and slim volume.</li>
 </ul>
-<h2 id="SSM2%3A-Problem-Situation-Expression">SSM2: Problem Situation Expression</h2>
+<h3 id="SSM2%3A-Problem-Situation-Expression">SSM2: Problem Situation Expression</h3>
+<p>There are two main use cases that work as diagrams below.</p>
+<h4 id="Use-case1%3A-Location-recording-scene">Use case1: Location recording scene</h4>
+<p><img src="../../assets/images/case1.png" alt="" /><br />
+The card regularly calls up GPS information and stores the data by detecting whether the user is moving or not.</p>
+<h4 id="Use-case2%3A-Data-transfer-%26amp%3B-backup-scene">Use case2: Data transfer &amp; backup scene</h4>
+<p><img src="../../assets/images/case2.png" alt="" /><br />
+Cards are privacy-secured through decentralized servers. Footprint visualization using Bluetooth on mobile phones.</p>
 
                         
                     </div>
@@ -178,18 +185,8 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
                 <div id="previous_next">
                     <div id="previous">
                         
-                        <a href="/IoT_QMUL/docs/get_started/en/index.html">
-                            <span class="icon"></span>
-                            <span class="label">Introduction</span>
-                        </a>
-                        
                     </div>
                     <div id="next">
-                        
-                        <a href="/IoT_QMUL/docs/get_started/en/use cases/use_cases.html">
-                            <span class="label">Use Cases</span>
-                            <span class="icon"></span>
-                        </a>
                         
                     </div>
                 </div>

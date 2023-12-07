@@ -1,7 +1,7 @@
 items:
 -   label: Introduction
     file: README.md
--   label: Objective
-    file: objective/objective.md
+-   label: Problem Statement
+    file: problem_statement/problem_statement.md
 -   label: Use Cases
     file: use cases/use_cases.md

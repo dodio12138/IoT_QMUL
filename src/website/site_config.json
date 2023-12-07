@@ -42,7 +42,7 @@
                 "dark": true,
                 "show_print_page": false,
                 "env":{
-                    "main_color": "#4caf7d"
+                    "main_color": "#0D3273"
                 }
             }
         },
@@ -62,8 +62,8 @@
                     "/static/js/custom.js"
                 ],
                 "env":{
-                    "main_color": "#4caf7d",
-                    "second_color": "#0a7d43"
+                    "main_color": "#0D3273",
+                    "second_color": "#09244c"
                 }
             }
         }

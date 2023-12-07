@@ -1,8 +1,7 @@
 
 ---
-title: my_site
-keywords: my_site
-desc: my_site, generated with teedoc, a static site generator
+title: Footprint Card
+desc: IoT Coursework
 id: home_page
 ---
 
@@ -10,10 +9,13 @@ id: home_page
 
 
 <div>
-    <h1><span>my_site</span></h1>
-    <h3>好耶~ 网站出现啦！</h3>
+    <h1><span>Queen Mary University of London</span></h1>
+    <h1><span>IoT Coursework (Option B): Footprint Card</span></h1>
+    <h3>Module: Introduction to IoT</h3>
+    <h3>Student Name: Wenhao Zhang</h3>
+    <h3>Student ID: 220788030</h3>
 </div>
 <div id="big_btn_wrapper">
-    <a class="btn" href="/doc1/">See Doc1</a>
+    <a class="btn" href="/docs/get_started">Document</a>
 </div>
 
