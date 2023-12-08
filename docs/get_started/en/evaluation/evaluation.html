@@ -44,7 +44,7 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
         
     
     
-    <title>Introduction - Footprint Card</title>
+    <title>Evaluation - Footprint Card</title>
     
     <script type="text/javascript">js_vars = {}</script>
     <script type="text/javascript">metadata = {"tags": [], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
@@ -95,13 +95,13 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
                 <div id="sidebar_title">
                     
                 </div>
-                <ul class="">
+                <ul class="show">
 <li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/en/index.html"><span class="label">Introduction</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/en/problem_statement/problem_statement.html"><span class="label">Problem Statement</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/en/requirement_analysis/requirement_analysis.html"><span class="label">Requirement Analysis</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/en/design/design.html"><span class="label">Design</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/en/implementation/implementation.html"><span class="label">Implementation</span><span class=""></span></a></li>
-<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/en/evaluation/evaluation.html"><span class="label">Evaluation</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/IoT_QMUL/docs/get_started/en/evaluation/evaluation.html"><span class="label">Evaluation</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/en/conclusion/conclusion.html"><span class="label">Conclusion</span><span class=""></span></a></li>
 </ul>
 
@@ -117,7 +117,7 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
                     <div id="article_head">
                         <div id="article_title">
                             
-                            <h1>Introduction</h1>
+                            <h1>Evaluation</h1>
                             
                         </div>
                         <div id="article_tags">
@@ -146,67 +146,44 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
                     </div>
                     <div id="article_content">
                         
-                            <p>Official website: <a href="https://teedoc.neucrack.com/"  target="_blank">teedoc.neucrack.com</a> or <a href="https://teedoc.github.io/"  target="_blank">teedoc.github.io</a><br />
-Source file of this document: <a href="https://github.com/teedoc/teedoc.github.io"  target="_blank">github.com/teedoc/teedoc.github.io</a><br />
-Source code: <a href="https://github.com/teedoc/teedoc"  target="_blank">https://github.com/teedoc/teedoc</a> Welcome star</p>
-<p>Convert documents in <code>Markdown</code> or <code>Jupyter Notebook</code> format into <code>HTML</code> static web pages</p>
-<p><code>teedoc</code> can be used in the following scenarios:</p>
+                            <h2 id="Recording-test">Recording test</h2>
+<p>The test was carried out on journeys from Croydon to Queen Mary University of London (My primary route to school) in some day.</p>
 <ul>
-<li>Build a document website, and it’s best to support multiple documents and custom pages</li>
-<li>Build a <code>WiKi</code> website</li>
-<li>Build a personal or corporate knowledge base</li>
-<li>Build a personal or corporate website</li>
-<li>Blog</li>
+<li>Footprint cards can intermittently record and successfully save location information.</li>
+<li>In some narrow and metro sections, GPS signals cannot be received properly. In addition, signal loss also occurs at certain moments in open areas, and it is assumed that the probable cause is that the GPS signal was extracted at a time when the GPS fix phase was in progress, and that any subsequent time intervals need to be adjusted.</li>
+<li>The range was not tested as there is no corresponding battery design for this project yet.</li>
 </ul>
-<p>If you encounter problems during use, you can find similar problems in <a href="https://github.com/teedoc/teedoc/issues"  target="_blank">here</a> (you need to register and log in to github) to find similar issues, or create an issue</p>
-<h2 id="Features">Features</h2>
+<h2 id="Display-test">Display test</h2>
 <ul>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Simple to use, cross-platform, only dependent on <code>Python3</code></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>No database required, all static pages of the website</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>The deployment is simple, the generated website is a fully static page, which can be directly copied to the server or uploaded to a third party organization for deployment</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Easy to write, using Markdown syntax</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Jupyter notebook support</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>HTML support, you can directly use HTML to write pages, with great freedom</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Multi-document support</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Plug-in support</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Multi-theme support (implemented by plug-in)</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Control the style accurate to the page through css (implemented by customizing the id and class of each page)</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Multi-level directory support(infinite levels)</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Multi-language support (manual translation) (Internationalization/i18n)</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled/>Multilingual support (automatic translation)</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Multi-version support (implementation method is the same as multi-language)</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Search support</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>SEO friendly</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Real-time preview of changes</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Multi-threaded construction, faster construction speed</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Blog support</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Switch from gitbook is easy, just config <code>route</code> and convert <code>SUMMARY.md</code> by <code>summary2yaml</code> command</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Comments(Plugins), e.g. <code>gitalk</code></li>
+<li>The storage format is finalized in <code>csv</code> format.</li>
+<li>For the time being, third-party software is used for map presentation. Below are screenshots:</li>
 </ul>
-<h2 id="Demo">Demo</h2>
-<p><a href="https://teedoc.github.io/"  target="_blank">This website</a> is generated using <code>teedoc</code>, what you see now is what the generated website looks like.</p>
-<p>In addition, there are other websites that use <code>teedoc</code>, please see <a href="./usage/sites.html"  >here</a> for details</p>
-<h2 id="Similar-tools">Similar tools</h2>
-<p>In fact, there are many tools of this type, but each one is slightly different. Just choose one according to your needs.</p>
-<p>If you have choice difficulties, you are recommended to use teedoc if you meet some of the following conditions:</p>
+<p><img src="../../assets/images/Screenshot.png" alt="" /></p>
+<blockquote class="spoiler warning">
+<p> Due to some testing and debugging, some data points were incorrectly connected, but the approximate path can still be seen.</p>
+</blockquote>
 <ul>
-<li>Use <code>Jupyter notebook</code> to write documents or code? Decisively choose teedoc</li>
-<li>Does the function meet your needs?</li>
-<li>Does the interface meet your aesthetics (you can customize css, or change the theme plug-in)</li>
-<li>Familiar with Python? Plug-ins and functions can be customized at any time</li>
+<li>It is also possible to import the <code>csv</code> into Google Earth for viewing by converting it to <code>KML</code> format using an online tool<sup class="footnote-ref" id="fnref-1"><a href="#fn-1">1</a></sup>, these will be demonstrated in a later video.</li>
 </ul>
-<p>Other similar tools:</p>
+<h2 id="Shortcomings">Shortcomings</h2>
 <ul>
-<li>docusaurus: The UI layout of teedoc is almost similar to it, but it uses vue to write, teedoc is native js, if you use vue, you can consider this</li>
-<li>gitbook: a tool that used to be very useful, but it is no longer maintained by the government, and it is turned to commercial. It is not recommended to use it</li>
-<li>docsify: Only one page is needed. Markdown is rendered in the browser instead of pre-rendered into HTML. The advantage is that it is lightweight, but SEO is not friendly. You can use its SSR function, written in nodejs</li>
-<li>readthedocs: A tool used by many open source projects. Like gitbook, it also has a website service. You can start writing documents after registering and logging in, or you can download the software to generate the website yourself, which is friendly to the RST format.</li>
+<li>Positioning is easily lost.</li>
+<li>The current Bluetooth connection is cumbersome and inflexible and requires an improved transmission method.</li>
+<li>Sketchy user interface.</li>
 </ul>
-<h2 id="Some-usage-suggestions">Some usage suggestions</h2>
+<h2 id="Future-action">Future action</h2>
 <ul>
-<li>Add <code>Generate with teedoc</code> in footer to help more people discover teedoc and promote the growth of the project</li>
-<li>Use the template project to start a new document project, you can run it first, and then modify it according to your own needs, so that you can get started faster</li>
+<li>Design a new set of UI.</li>
+<li>Optimization of data transfer methods.</li>
+<li>Design a circuit board containing a one-to-three power management module and charging module.</li>
+<li>Design Footprint Card Case.</li>
 </ul>
+<hr />
+<section class="footnotes">
+<ol>
+<li id="fn-1"><p><a href="https://mygeodata.cloud/converter/"  target="_blank">https://mygeodata.cloud/converter/</a><a href="#fnref-1" class="footnote">&#8617;</a></p></li>
+</ol>
+</section>
 
                         
                     </div>
@@ -214,8 +191,18 @@ Source code: <a href="https://github.com/teedoc/teedoc"  target="_blank">https:/
                 <div id="previous_next">
                     <div id="previous">
                         
+                        <a href="/IoT_QMUL/docs/get_started/en/implementation/implementation.html">
+                            <span class="icon"></span>
+                            <span class="label">Implementation</span>
+                        </a>
+                        
                     </div>
                     <div id="next">
+                        
+                        <a href="/IoT_QMUL/docs/get_started/en/conclusion/conclusion.html">
+                            <span class="label">Conclusion</span>
+                            <span class="icon"></span>
+                        </a>
                         
                     </div>
                 </div>

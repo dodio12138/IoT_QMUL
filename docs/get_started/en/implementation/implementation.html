@@ -44,7 +44,7 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
         
     
     
-    <title>Introduction - Footprint Card</title>
+    <title>Implementation - Footprint Card</title>
     
     <script type="text/javascript">js_vars = {}</script>
     <script type="text/javascript">metadata = {"tags": [], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
@@ -95,12 +95,12 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
                 <div id="sidebar_title">
                     
                 </div>
-                <ul class="">
+                <ul class="show">
 <li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/en/index.html"><span class="label">Introduction</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/en/problem_statement/problem_statement.html"><span class="label">Problem Statement</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/en/requirement_analysis/requirement_analysis.html"><span class="label">Requirement Analysis</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/en/design/design.html"><span class="label">Design</span><span class=""></span></a></li>
-<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/en/implementation/implementation.html"><span class="label">Implementation</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/IoT_QMUL/docs/get_started/en/implementation/implementation.html"><span class="label">Implementation</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/en/evaluation/evaluation.html"><span class="label">Evaluation</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/en/conclusion/conclusion.html"><span class="label">Conclusion</span><span class=""></span></a></li>
 </ul>
@@ -117,7 +117,7 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
                     <div id="article_head">
                         <div id="article_title">
                             
-                            <h1>Introduction</h1>
+                            <h1>Implementation</h1>
                             
                         </div>
                         <div id="article_tags">
@@ -146,67 +146,179 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
                     </div>
                     <div id="article_content">
                         
-                            <p>Official website: <a href="https://teedoc.neucrack.com/"  target="_blank">teedoc.neucrack.com</a> or <a href="https://teedoc.github.io/"  target="_blank">teedoc.github.io</a><br />
-Source file of this document: <a href="https://github.com/teedoc/teedoc.github.io"  target="_blank">github.com/teedoc/teedoc.github.io</a><br />
-Source code: <a href="https://github.com/teedoc/teedoc"  target="_blank">https://github.com/teedoc/teedoc</a> Welcome star</p>
-<p>Convert documents in <code>Markdown</code> or <code>Jupyter Notebook</code> format into <code>HTML</code> static web pages</p>
-<p><code>teedoc</code> can be used in the following scenarios:</p>
+                            <h2 id="Hardware-development">Hardware development</h2>
+<p>Since this is a prototype development, in this project a breadboard and an external power supply is used first.</p>
+<h3 id="Proposed-model-architecture">Proposed model architecture</h3>
+<p><img src="../../assets/images/borad.png" alt="" /></p>
 <ul>
-<li>Build a document website, and it’s best to support multiple documents and custom pages</li>
-<li>Build a <code>WiKi</code> website</li>
-<li>Build a personal or corporate knowledge base</li>
-<li>Build a personal or corporate website</li>
-<li>Blog</li>
+<li>The SDA and SCL of the OLED display are connected to the SDA and SCL of the board for I2C serial communication.</li>
+<li>The TX and RX ports of the GPS module are connected to GPIO2 and GPIO3 of the board.</li>
+<li>The board uses USB type C for external power supply.</li>
+<li>The on-board 5 volts powers the GPS module and 3.3 volts powers the OLED display.</li>
 </ul>
-<p>If you encounter problems during use, you can find similar problems in <a href="https://github.com/teedoc/teedoc/issues"  target="_blank">here</a> (you need to register and log in to github) to find similar issues, or create an issue</p>
-<h2 id="Features">Features</h2>
-<ul>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Simple to use, cross-platform, only dependent on <code>Python3</code></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>No database required, all static pages of the website</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>The deployment is simple, the generated website is a fully static page, which can be directly copied to the server or uploaded to a third party organization for deployment</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Easy to write, using Markdown syntax</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Jupyter notebook support</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>HTML support, you can directly use HTML to write pages, with great freedom</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Multi-document support</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Plug-in support</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Multi-theme support (implemented by plug-in)</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Control the style accurate to the page through css (implemented by customizing the id and class of each page)</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Multi-level directory support(infinite levels)</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Multi-language support (manual translation) (Internationalization/i18n)</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled/>Multilingual support (automatic translation)</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Multi-version support (implementation method is the same as multi-language)</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Search support</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>SEO friendly</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Real-time preview of changes</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Multi-threaded construction, faster construction speed</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Blog support</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Switch from gitbook is easy, just config <code>route</code> and convert <code>SUMMARY.md</code> by <code>summary2yaml</code> command</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Comments(Plugins), e.g. <code>gitalk</code></li>
-</ul>
-<h2 id="Demo">Demo</h2>
-<p><a href="https://teedoc.github.io/"  target="_blank">This website</a> is generated using <code>teedoc</code>, what you see now is what the generated website looks like.</p>
-<p>In addition, there are other websites that use <code>teedoc</code>, please see <a href="./usage/sites.html"  >here</a> for details</p>
-<h2 id="Similar-tools">Similar tools</h2>
-<p>In fact, there are many tools of this type, but each one is slightly different. Just choose one according to your needs.</p>
-<p>If you have choice difficulties, you are recommended to use teedoc if you meet some of the following conditions:</p>
-<ul>
-<li>Use <code>Jupyter notebook</code> to write documents or code? Decisively choose teedoc</li>
-<li>Does the function meet your needs?</li>
-<li>Does the interface meet your aesthetics (you can customize css, or change the theme plug-in)</li>
-<li>Familiar with Python? Plug-ins and functions can be customized at any time</li>
-</ul>
-<p>Other similar tools:</p>
-<ul>
-<li>docusaurus: The UI layout of teedoc is almost similar to it, but it uses vue to write, teedoc is native js, if you use vue, you can consider this</li>
-<li>gitbook: a tool that used to be very useful, but it is no longer maintained by the government, and it is turned to commercial. It is not recommended to use it</li>
-<li>docsify: Only one page is needed. Markdown is rendered in the browser instead of pre-rendered into HTML. The advantage is that it is lightweight, but SEO is not friendly. You can use its SSR function, written in nodejs</li>
-<li>readthedocs: A tool used by many open source projects. Like gitbook, it also has a website service. You can start writing documents after registering and logging in, or you can download the software to generate the website yourself, which is friendly to the RST format.</li>
-</ul>
-<h2 id="Some-usage-suggestions">Some usage suggestions</h2>
-<ul>
-<li>Add <code>Generate with teedoc</code> in footer to help more people discover teedoc and promote the growth of the project</li>
-<li>Use the template project to start a new document project, you can run it first, and then modify it according to your own needs, so that you can get started faster</li>
-</ul>
+<h2 id="Software-development">Software development</h2>
+<p>Since the ESP series development boards support Arduino for programming, they are developed using the Arduino IDE.</p>
+<h3 id="GPS-Module-and-OLED-display">GPS Module and OLED display</h3>
+<p>Reading the GPS module directly will get its standard language NMEA<sup class="footnote-ref" id="fnref-1"><a href="#fn-1">1</a></sup> (National Marine Electronics Association), which is a standard data format generally supported by manufacturers in the following form:</p>
+
+<pre class="language-none"><code class="language-none">$GPGGA,110617.00,51XX.XXXXX,N,00009.XXXXX,W,1,05,2.68,129.0,M,50.1,M,,*42
+$GPGSA,A,3,06,09,30,07,23,,,,,,,,4.43,2.68,3.53*02
+$GPGSV,3,1,11,02,48,298,24,03,05,101,24,05,17,292,20,06,71,227,30*7C
+$GPGSV,3,2,11,07,47,138,33,09,64,044,28,17,01,199,,19,13,214,*7C
+$GPGSV,3,3,11,23,29,054,29,29,01,335,,30,29,167,33*4E
+$GPGLL,51XX.XXXXX,N,00009.XXXXX,W,110617.00,A,A*70
+$GPRMC,110618.00,A,51XX.XXXXX,N,00009.XXXXX,W,0.078,,030118,,,A*6A 
+$GPVTG,,T,,M,0.043,N,0.080,K,A*2C
+</code></pre>
+<p>We only need information about the time and location coordinates, and we only need to focus on the GPGGA column at the beginning. Where <code>110617.00</code> means 11:06:17 UTC, <code>51XX.XXXXXX, N</code> means 51.XXXXXXXX degrees North, <code>00009.XXXXXX, W</code> means 0.09XXXXX degrees West.<br />
+In this project, the TinyGPSPlus<sup class="footnote-ref" id="fnref-2"><a href="#fn-2">2</a></sup> library and U8g2<sup class="footnote-ref" id="fnref-3"><a href="#fn-3">3</a></sup> library are used for quick development. The base code is as follows:</p>
+
+<pre class="language-C++"><code class="language-C++">#include &lt;Arduino.h&gt;
+#include &lt;U8g2lib.h&gt;
+
+#ifdef U8X8_HAVE_HW_SPI
+#include &lt;SPI.h&gt;
+#endif
+#ifdef U8X8_HAVE_HW_I2C
+#include &lt;Wire.h&gt;
+#endif
+
+#include &lt;TinyGPSPlus.h&gt;
+#include &lt;SoftwareSerial.h&gt;
+
+static const int RXPin = 3, TXPin = 2;
+static const uint32_t GPSBaud = 4800;
+
+#define time_delay 2000
+U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE, /* clock=*/ 9, /* data=*/ 8); 
+
+// The TinyGPSPlus object
+TinyGPSPlus gps;
+
+// The serial connection to the GPS device
+SoftwareSerial ss(RXPin, TXPin);
+
+int a;
+
+void setup() {
+  u8g2.begin();
+
+  Serial.begin(115200);
+  ss.begin(GPSBaud);
+  a = 0;
+}
+
+void loop() {
+  u8g2.sendBuffer();
+  u8g2.clearBuffer();
+  u8g2_prepare();
+  a += 1;
+  char b = char(a);
+  u8g2.drawStr(80, 0, &amp;b);
+  u8g2_GPS_data(gps.location.lat(), gps.location.lng());
+  printDateTime(gps.time);
+  smartDelay(1000);
+
+  if (millis() &gt; 5000 &amp;&amp; gps.charsProcessed() &lt; 10)
+    u8g2_No_GPS_data();
+
+  u8g2.sendBuffer();
+}
+
+static void smartDelay(unsigned long ms)
+{
+  unsigned long start = millis();
+  do 
+  {
+    while (ss.available())
+      gps.encode(ss.read());
+  } while (millis() - start &lt; ms);
+}
+
+void u8g2_prepare(void) {
+  u8g2.setFont(u8g2_font_6x10_tf);
+  u8g2.setFontRefHeightExtendedText();
+  u8g2.setDrawColor(1);
+  u8g2.setFontPosTop();
+  u8g2.setFontDirection(0);
+}
+
+void u8g2_No_GPS_data() {
+  u8g2.drawStr(0, 30, &quot;No GPS data received&quot;);
+}
+
+void u8g2_GPS_data(float lat, float lng) {
+  u8g2.drawStr(0, 0,&quot;Lat: &quot;);
+  char buffer1[10];
+  dtostrf(lat, 6, 3, buffer1);
+  u8g2.drawStr(25,0,buffer1);
+  u8g2.drawStr(0, 10,&quot;Lng: &quot;);
+  char buffer2[10];
+  dtostrf(lng, 6, 3, buffer2);
+  u8g2.drawStr(25,10,buffer2);
+}
+
+static void printDateTime(TinyGPSTime &amp;t)
+{ 
+  if (!t.isValid())
+  {
+    u8g2.drawStr(0, 20,&quot;******&quot;);;
+  }
+  else
+  {
+    char sz[32];
+    sprintf(sz, &quot;%02d:%02d:%02d &quot;, t.hour(), t.minute(), t.second());
+    u8g2.drawStr(0, 20,&quot;Time: &quot;);
+    u8g2.drawStr(36, 20, sz);
+  }
+  smartDelay(0);
+}
+</code></pre>
+<h3 id="Bluetooth-Low-Energy">Bluetooth Low Energy</h3>
+<p>Bluetooth Low Energy (BLE) is an energy-efficient variant of Bluetooth. The main application of BLE is the transmission of small amounts of data over short distances (low bandwidth). Unlike always-on Bluetooth, BLE is always in sleep mode unless a connection is initiated. This makes it consume very low power.</p>
+
+<pre class="language-C++"><code class="language-C++">#include &lt;BLEDevice.h&gt;
+#include &lt;BLEUtils.h&gt;
+#include &lt;BLEServer.h&gt;
+
+#define SERVICE_UUID        &quot;**************************&quot;
+#define CHARACTERISTIC_UUID &quot;**************************&quot;
+
+void setup() {
+  Serial.begin(115200);
+  Serial.println(&quot;Starting BLE&quot;);
+
+  BLEDevice::init(&quot;Long name works now&quot;);
+  BLEServer *pServer = BLEDevice::createServer();
+  BLEService *pService = pServer-&gt;createService(SERVICE_UUID);
+  BLECharacteristic *pCharacteristic = pService-&gt;createCharacteristic(
+                                         CHARACTERISTIC_UUID,
+                                         BLECharacteristic::PROPERTY_READ |
+                                         BLECharacteristic::PROPERTY_WRITE
+                                       );
+
+  pCharacteristic-&gt;setValue(&quot;Hello World says Neil&quot;);
+  pService-&gt;start();
+  BLEAdvertising *pAdvertising = BLEDevice::getAdvertising();
+  pAdvertising-&gt;addServiceUUID(SERVICE_UUID);
+  pAdvertising-&gt;setScanResponse(true);
+  pAdvertising-&gt;setMinPreferred(0x12);
+  BLEDevice::startAdvertising();
+}
+
+void loop() {
+
+  delay(2000);
+}
+</code></pre>
+<hr />
+<section class="footnotes">
+<ol>
+<li id="fn-1"><p><a href="https://www.nmea.org/"  target="_blank">https://www.nmea.org/</a><a href="#fnref-1" class="footnote">&#8617;</a></p></li>
+<li id="fn-2"><p><a href="https://github.com/mikalhart/TinyGPSPlus"  target="_blank">https://github.com/mikalhart/TinyGPSPlus</a><a href="#fnref-2" class="footnote">&#8617;</a></p></li>
+<li id="fn-3"><p><a href="https://github.com/olikraus/u8g2"  target="_blank">https://github.com/olikraus/u8g2</a><a href="#fnref-3" class="footnote">&#8617;</a></p></li>
+</ol>
+</section>
 
                         
                     </div>
@@ -214,8 +326,18 @@ Source code: <a href="https://github.com/teedoc/teedoc"  target="_blank">https:/
                 <div id="previous_next">
                     <div id="previous">
                         
+                        <a href="/IoT_QMUL/docs/get_started/en/design/design.html">
+                            <span class="icon"></span>
+                            <span class="label">Design</span>
+                        </a>
+                        
                     </div>
                     <div id="next">
+                        
+                        <a href="/IoT_QMUL/docs/get_started/en/evaluation/evaluation.html">
+                            <span class="label">Evaluation</span>
+                            <span class="icon"></span>
+                        </a>
                         
                     </div>
                 </div>

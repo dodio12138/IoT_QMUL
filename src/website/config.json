@@ -1,7 +1,7 @@
 {
     "locale": "en",
     "navbar": {
-        "title": "GPS Recording",
+        "title": "Footprint Card",
         "logo": {
             "alt": "teedoc logo",
             "src": "/static/image/logo.png"

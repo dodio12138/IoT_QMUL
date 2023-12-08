@@ -3,5 +3,13 @@ items:
     file: README.md
 -   label: Problem Statement
     file: problem_statement/problem_statement.md
--   label: Use Cases
-    file: use cases/use_cases.md
+-   label: Requirement Analysis
+    file: requirement_analysis/requirement_analysis.md
+-   label: Design
+    file: design/design.md
+-   label: Implementation
+    file: implementation/implementation.md
+-   label: Evaluation
+    file: evaluation/evaluation.md
+-   label: Conclusion
+    file: conclusion/conclusion.md

@@ -1,1 +1,4 @@
 {"rule":"ENGLISH_WORD_REPEAT_RULE","sentence":"^\\QImportant processes\nRecord GPS information for a long period of time\nTransmission of information via Bluetooth communication\nVisualization of user data\nData storage\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_RULE","sentence":"^\\QFunctional Requirements\nRequirements Priority (E)-Essential (C)-Conditional (O)-Optional 2\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_RULE","sentence":"^\\QFunctional Requirements\nRequirements Priority\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QSoftware Requirements\nArduino IDE\nU8g2 Library for screen development\nTinyGPSPlus Library for GPS development\nHTML + CSS + JS for web design\\E$"}

@@ -44,7 +44,7 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
         
     
     
-    <title>Introduction - Footprint Card</title>
+    <title>Requirement Analysis - Footprint Card</title>
     
     <script type="text/javascript">js_vars = {}</script>
     <script type="text/javascript">metadata = {"tags": [], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
@@ -95,10 +95,10 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
                 <div id="sidebar_title">
                     
                 </div>
-                <ul class="">
+                <ul class="show">
 <li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/en/index.html"><span class="label">Introduction</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/en/problem_statement/problem_statement.html"><span class="label">Problem Statement</span><span class=""></span></a></li>
-<li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/en/requirement_analysis/requirement_analysis.html"><span class="label">Requirement Analysis</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/IoT_QMUL/docs/get_started/en/requirement_analysis/requirement_analysis.html"><span class="label">Requirement Analysis</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/en/design/design.html"><span class="label">Design</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/en/implementation/implementation.html"><span class="label">Implementation</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/IoT_QMUL/docs/get_started/en/evaluation/evaluation.html"><span class="label">Evaluation</span><span class=""></span></a></li>
@@ -117,7 +117,7 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
                     <div id="article_head">
                         <div id="article_title">
                             
-                            <h1>Introduction</h1>
+                            <h1>Requirement Analysis</h1>
                             
                         </div>
                         <div id="article_tags">
@@ -146,67 +146,107 @@ MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"]
                     </div>
                     <div id="article_content">
                         
-                            <p>Official website: <a href="https://teedoc.neucrack.com/"  target="_blank">teedoc.neucrack.com</a> or <a href="https://teedoc.github.io/"  target="_blank">teedoc.github.io</a><br />
-Source file of this document: <a href="https://github.com/teedoc/teedoc.github.io"  target="_blank">github.com/teedoc/teedoc.github.io</a><br />
-Source code: <a href="https://github.com/teedoc/teedoc"  target="_blank">https://github.com/teedoc/teedoc</a> Welcome star</p>
-<p>Convert documents in <code>Markdown</code> or <code>Jupyter Notebook</code> format into <code>HTML</code> static web pages</p>
-<p><code>teedoc</code> can be used in the following scenarios:</p>
+                            <h2 id="Functional-Requirements">Functional Requirements</h2>
+<table>
+<thead>
+<tr>
+  <th>Requirements</th>
+  <th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Use GPS module to get location coordinate information</td>
+  <td>Essential</td>
+</tr>
+<tr>
+  <td>Data storage and backup</td>
+  <td>Essential</td>
+</tr>
+<tr>
+  <td>OLED screen displaying data</td>
+  <td>Optional</td>
+</tr>
+<tr>
+  <td>Bluetooth matching and transmission</td>
+  <td>Essential</td>
+</tr>
+<tr>
+  <td>Visual Web Development</td>
+  <td>Optional</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Hardware-Requirements">Hardware Requirements</h2>
+<h3 id="Board-selection">Board selection</h3>
+<p>The main Boards available in the market are Arduino series, ESP series and STM32 series. Some boards in Arduino and esp are selected for this project, as the project wants the device to be small enough and low power consumption, some types of Boards are selected to be shown in the table below.</p>
+<table>
+<thead>
+<tr>
+  <th>Board Name</th>
+  <th>PCB Size (mm)</th>
+  <th>Flash Memory</th>
+  <th>Wi-Fi</th>
+  <th>Bluetooth</th>
+  <th>Power consumption</th>
+  <th>Price (￡)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Arduino Nano<sup class="footnote-ref" id="fnref-1"><a href="#fn-1">1</a></sup></td>
+  <td>18 x 45 x 2.6</td>
+  <td>32 KB</td>
+  <td>N</td>
+  <td>N</td>
+  <td>normal</td>
+  <td>21.6</td>
+</tr>
+<tr>
+  <td>Arduino Nano 33 IoT<sup class="footnote-ref" id="fnref-2"><a href="#fn-2">2</a></sup></td>
+  <td>18 x 45 x 2.6</td>
+  <td>1 MB</td>
+  <td>Y</td>
+  <td>Y</td>
+  <td>low</td>
+  <td>22.8</td>
+</tr>
+<tr>
+  <td>ESP32-C3 mini<sup class="footnote-ref" id="fnref-3"><a href="#fn-3">3</a></sup></td>
+  <td>13.20 × 16.60 x 2.4</td>
+  <td>4 MB</td>
+  <td>Y</td>
+  <td>Y</td>
+  <td>low</td>
+  <td>9.90</td>
+</tr>
+</tbody>
+</table>
+<p>Based on functional requirements, cost and size considerations, the <strong>ESP32-C3 mini</strong> is chosen for this project.</p>
+<h3 id="Other-selection">Other selection</h3>
 <ul>
-<li>Build a document website, and it’s best to support multiple documents and custom pages</li>
-<li>Build a <code>WiKi</code> website</li>
-<li>Build a personal or corporate knowledge base</li>
-<li>Build a personal or corporate website</li>
-<li>Blog</li>
+<li>GPS Module: Ultimate GPS Breakout V3</li>
+<li>Screen: 0.96 Inch OLED I2C Display 128 x 64: Used to display some simple information as well as to develop user interaction possibilities for subsequent extensions.</li>
+<li>Breadboard</li>
+<li>External power supply: As this is a prototype development, no built-in power supply module has been designed, and the project focuses on verifying GPS-related.</li>
+<li>Smartphone</li>
+<li>Jumper Cables and connecting wires</li>
 </ul>
-<p>If you encounter problems during use, you can find similar problems in <a href="https://github.com/teedoc/teedoc/issues"  target="_blank">here</a> (you need to register and log in to github) to find similar issues, or create an issue</p>
-<h2 id="Features">Features</h2>
+<h2 id="Software-Requirements">Software Requirements</h2>
 <ul>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Simple to use, cross-platform, only dependent on <code>Python3</code></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>No database required, all static pages of the website</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>The deployment is simple, the generated website is a fully static page, which can be directly copied to the server or uploaded to a third party organization for deployment</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Easy to write, using Markdown syntax</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Jupyter notebook support</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>HTML support, you can directly use HTML to write pages, with great freedom</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Multi-document support</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Plug-in support</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Multi-theme support (implemented by plug-in)</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Control the style accurate to the page through css (implemented by customizing the id and class of each page)</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Multi-level directory support(infinite levels)</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Multi-language support (manual translation) (Internationalization/i18n)</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled/>Multilingual support (automatic translation)</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Multi-version support (implementation method is the same as multi-language)</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Search support</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>SEO friendly</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Real-time preview of changes</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Multi-threaded construction, faster construction speed</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Blog support</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Switch from gitbook is easy, just config <code>route</code> and convert <code>SUMMARY.md</code> by <code>summary2yaml</code> command</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled checked/>Comments(Plugins), e.g. <code>gitalk</code></li>
+<li>Arduino IDE: ESP supports Arduino for programming, which is obviously more efficient and convenient.</li>
+<li>U8g2 Library for screen development</li>
+<li>TinyGPSPlus Library for GPS development</li>
+<li>HTML + CSS + JS for web design</li>
 </ul>
-<h2 id="Demo">Demo</h2>
-<p><a href="https://teedoc.github.io/"  target="_blank">This website</a> is generated using <code>teedoc</code>, what you see now is what the generated website looks like.</p>
-<p>In addition, there are other websites that use <code>teedoc</code>, please see <a href="./usage/sites.html"  >here</a> for details</p>
-<h2 id="Similar-tools">Similar tools</h2>
-<p>In fact, there are many tools of this type, but each one is slightly different. Just choose one according to your needs.</p>
-<p>If you have choice difficulties, you are recommended to use teedoc if you meet some of the following conditions:</p>
-<ul>
-<li>Use <code>Jupyter notebook</code> to write documents or code? Decisively choose teedoc</li>
-<li>Does the function meet your needs?</li>
-<li>Does the interface meet your aesthetics (you can customize css, or change the theme plug-in)</li>
-<li>Familiar with Python? Plug-ins and functions can be customized at any time</li>
-</ul>
-<p>Other similar tools:</p>
-<ul>
-<li>docusaurus: The UI layout of teedoc is almost similar to it, but it uses vue to write, teedoc is native js, if you use vue, you can consider this</li>
-<li>gitbook: a tool that used to be very useful, but it is no longer maintained by the government, and it is turned to commercial. It is not recommended to use it</li>
-<li>docsify: Only one page is needed. Markdown is rendered in the browser instead of pre-rendered into HTML. The advantage is that it is lightweight, but SEO is not friendly. You can use its SSR function, written in nodejs</li>
-<li>readthedocs: A tool used by many open source projects. Like gitbook, it also has a website service. You can start writing documents after registering and logging in, or you can download the software to generate the website yourself, which is friendly to the RST format.</li>
-</ul>
-<h2 id="Some-usage-suggestions">Some usage suggestions</h2>
-<ul>
-<li>Add <code>Generate with teedoc</code> in footer to help more people discover teedoc and promote the growth of the project</li>
-<li>Use the template project to start a new document project, you can run it first, and then modify it according to your own needs, so that you can get started faster</li>
-</ul>
+<hr />
+<section class="footnotes">
+<ol>
+<li id="fn-1"><p><a href="https://store.arduino.cc/products/arduino-nano"  target="_blank">https://store.arduino.cc/products/arduino-nano</a><a href="#fnref-1" class="footnote">&#8617;</a></p></li>
+<li id="fn-2"><p><a href="https://store.arduino.cc/products/arduino-nano-33-iot"  target="_blank">https://store.arduino.cc/products/arduino-nano-33-iot</a><a href="#fnref-2" class="footnote">&#8617;</a></p></li>
+<li id="fn-3"><p><a href="https://www.wemos.cc/en/latest/c3/c3_mini.html"  target="_blank">https://www.wemos.cc/en/latest/c3/c3_mini.html</a><a href="#fnref-3" class="footnote">&#8617;</a></p></li>
+</ol>
+</section>
 
                         
                     </div>
@@ -214,8 +254,18 @@ Source code: <a href="https://github.com/teedoc/teedoc"  target="_blank">https:/
                 <div id="previous_next">
                     <div id="previous">
                         
+                        <a href="/IoT_QMUL/docs/get_started/en/problem_statement/problem_statement.html">
+                            <span class="icon"></span>
+                            <span class="label">Problem Statement</span>
+                        </a>
+                        
                     </div>
                     <div id="next">
+                        
+                        <a href="/IoT_QMUL/docs/get_started/en/design/design.html">
+                            <span class="label">Design</span>
+                            <span class="icon"></span>
+                        </a>
                         
                     </div>
                 </div>
