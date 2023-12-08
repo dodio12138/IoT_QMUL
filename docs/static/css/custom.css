@@ -1,6 +1,6 @@
 
 #page_content h1 {
-    color: #0D3273;
+    color: ${main_color};
 }
 
 #navbar .site_logo {
